@@ -1,0 +1,147 @@
+{% extends "All.html" %}
+{% block style %}
+body {
+min-height: 100vh;
+flex-direction: column;
+gap: 30px;
+/* background: radial-gradient(rgb(224, 18, 159),rgb(67, 27, 225)); */
+background-image: url({{url_for('static',filename='kalna polytechnic.jpg')}});
+background-size: cover;
+<!-- background: no-repeat; -->
+background-position: center;
+}
+.container{
+margin-top:20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.wrappe {
+  margin:30px 0px 50px 0px;
+position: relative;
+width: 400px;
+height: 350px;
+background: transparent;
+border: 2px solid rgba(255, 255, 255, .5);
+border-radius: 20px;
+backdrop-filter: blur(20px);
+box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+form.mid{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.inputbox{
+position: relative;
+top:10px;
+height: 500px;
+width: 300px;
+
+}
+.inputbox input {
+width: 100%;
+padding: 10px;
+border: 1px solid rgba(255, 255, 255, 0.468);
+background: rgb(34, 40, 133);
+border-radius: 5px;
+outline: none;
+color: aliceblue;
+font-size: 1em;
+}
+
+.inputbox label {
+position: absolute;
+left: 0;
+padding: 10px;
+pointer-events: none;
+font-size: 1em;
+color: rgb(7, 75, 135);
+text-transform: uppercase;
+}
+.inputbox input:valid~label,
+.inputbox input:focus~label {
+color: aqua;
+transform: translateX(10px) translateY(-7px);
+font-size: .65em;
+padding: 0 10px;
+background: black;
+border-left: 1px solid aqua;
+border-right: 1px solid aqua;
+letter-spacing: .2em;
+}
+.inputbox select{
+  width: 100%;
+  padding: 10px;
+  border:1px solid rgba(255, 255, 255, 0.468);
+  background:rgb(34, 40, 133);
+  border-radius: 5px;
+  outline: none;
+  color: aliceblue;
+  font-size: 1em;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.inputbox option{
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  /* color: rgb(7, 75, 135); */
+  text-transform: uppercase;
+}
+
+{% endblock style %}
+{% block body %}
+<!-- <div class="con"> -->
+<div class="container my-4">
+  <!-- <div class="inp_mid"> -->
+  <div class="wrappe">
+    <h3 style="text-align: center; margin: 0 0 15px;"><b>Add Student</b></h3>
+    <form class="mid" action="/student" method="POST">
+
+      <div class="inputbox mb-5">
+        <div class="mb-3">
+          <!-- class="form-control" -->
+          <input type="text" name="title" id="title" aria-describedby="emailHelp" required>
+          <label for="title" class="form-label"> Full Name </label>
+        </div>
+        <div class="mb-3">
+          <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="desc"
+            id="desc">
+            <option selected value=" " for="desc" class="form-label">DEPARTMENT</option>
+            <option value="Computer Scince and Enginnering" for="desc" class="form-label">Computer Scince and
+              Enginnering</option>
+            <option value="Electrical and Electronics Engineeringee" for="desc" class="form-label">Electrical and
+              Electronics Engineeringee</option>
+            <option value="Civil Enginnering" for="desc" class="form-label">Civil Enginnering</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <!-- class="form-control" -->
+          <input type="text" name="reg" id="reg" required>
+          <label for="reg" class="form-label">Registration-No</label>
+        </div>
+        <div class="mb-3" style="text-align: center;">
+          <button id="bot" type="submit" class="btn btn-outline-dark" style="margin-top: 20px; background-color: rgb(58, 34, 211); color: white;">Submit</button>
+        </div>
+      </div>
+  </div>
+</div>
+</form>
+</div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+{% endblock body %}
