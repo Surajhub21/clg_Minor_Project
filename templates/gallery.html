@@ -1,130 +1,106 @@
 {% extends 'All.html' %}
 {% block body %}
-    <!-- Content wrapper -->
-    <div class="contents-wrapper">
-        <!-- Contents starts here -->
-        <div class="content">
-            <div class="gallery gallery-design">
-                <div class="title">
-                    <h1>Gallery</h1>
-                </div>
+<!-- Content wrapper -->
+<div class="contents-wrapper">
+    <!-- Contents starts here -->
+    <div class="content">
+        <div class="gallery gallery-design">
+            <div class="title">
+                <h1>Gallery</h1>
+            </div>
 
-                <div class="grid">
-                    <div class="grid-sizer"></div>
-                    <!-- Remove appropriate comment and insert relevant caption if needed. -->
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <!-- Remove appropriate comment and insert relevant caption if needed. -->
 
-                    <!--Image 1-->
-                    <a class="element-item grid-item mix mockups" href="img/board1.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 1-->
+                <a class="element-item grid-item mix mockups" href="static/download (1).jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/board1.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'download (1).jpg') }}" alt="">
+                </a>
 
-                    <!--Image 2-->
-                    <a class="element-item grid-item mix mockups" href="img/classroom.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 2-->
+                <a class="element-item grid-item mix mockups" href="static/download (2).jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/classroom.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'download (2).jpg') }}" alt="">
+                </a>
 
-                    <!--Image 3-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/faculty.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 3-->
+                <a class="element-item grid-item mix mockups" href="static/download (3).jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/faculty.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'download (3).jpg') }}" alt="">
+                </a>
 
-                    <!--Image 4-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/focus.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 4-->
+                <a class="element-item grid-item mix mockups" href="static/download.jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/focus.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'download.jpg') }}" alt="">
+                </a>
 
-                    <!--Image 5-->
-                    <a class="element-item grid-item mix mockups" href="img/event1.JPG">
-                        <!--                            <div class="desc">
+                <!--Image 5-->
+                <a class="element-item grid-item mix mockups" href="static/img--1.jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/event1.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'img--1.jpg') }}" alt="">
+                </a>
 
-                    <!--Image 6-->
-                    <a class="element-item grid-item mix mockups" href="img/event2.JPG">
-                        <!--                            <div class="desc">
+                <!--Image 6-->
+                <a class="element-item grid-item mix mockups" href="static/1.webp">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/event2.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = '1.webp') }}" alt="">
+                </a>
 
-                    <!--Image 7-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/students.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 7-->
+                <a class="element-item grid-item mix mockups" href="static/kalna polytechnic.jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/students.jpg" alt="">
-                    </a>
+                        --> <img src="{{ url_for ('static',filename = 'kalna polytechnic.jpg') }}" alt="">
+                </a>
 
-                    <!--Image 8-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/gallery.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 8-->
+                <a class="element-item grid-item mix mockups" href="img/gallery/gallery.jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
                         --> <img src="img/thumbnail/gallery.jpg" alt="">
-                    </a>
+                </a>
 
-                    <!--Image 9-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/talk.jpg">
-                        <!--                            <div class="desc">
+                <!--Image 9-->
+                <a class="element-item grid-item mix mockups" href="static/princple.jpg">
+                    <!--                            <div class="desc">
                                                         <div class="desc-title">
                                                             <span>Caption</span>
                                                         </div>
                                                     </div>
-                        --> <img src="img/thumbnail/talk.jpg" alt="">
-                    </a>
-
-                    <!--Image 10-->
-                    <a class="element-item grid-item mix mockups" href="img/event3.jpg">
-                        <!--                            <div class="desc">
-                                                        <div class="desc-title">
-                                                            <span>Caption</span>
-                                                        </div>
-                                                    </div>
-                        --> <img src="img/thumbnail/event3.jpg" alt="">
-                    </a>
-
-                    <!--Image 11-->
-                    <a class="element-item grid-item mix mockups" href="img/gallery/winners.jpg">
-                        <!--                            <div class="desc">
-                                                        <div class="desc-title">
-                                                            <span>Caption</span>
-                                                        </div>
-                                                    </div>
-                        --> <img src="img/thumbnail/winners.jpg" alt="">
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endblock body %}
+                        --> <img src="{{ url_for ('static',filename = 'princple.jpg') }}" alt="">
+                </a>
+                </div></div></div></div>
+{% endblock body %}
