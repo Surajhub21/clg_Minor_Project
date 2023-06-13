@@ -52,7 +52,14 @@
                                                     </div>
                         --> <img src="{{ url_for ('static',filename = 'download.jpg') }}" alt="">
                 </a>
-
+                <a class="element-item grid-item mix mockups" href="static\download.jpeg">
+                    <!--                            <div class="desc">
+                                                        <div class="desc-title">
+                                                            <span>Caption</span>
+                                                        </div>
+                                                    </div>
+                        --> <img src="{{ url_for ('static',filename = 'download.jpeg') }}" alt="">
+                </a>
                 <!--Image 5-->
                 <a class="element-item grid-item mix mockups" href="static/img--1.jpg">
                     <!--                            <div class="desc">
@@ -62,7 +69,14 @@
                                                     </div>
                         --> <img src="{{ url_for ('static',filename = 'img--1.jpg') }}" alt="">
                 </a>
-
+                <a class="element-item grid-item mix mockups" href="static\AweAmDJzK6xBp7A480x360.jpeg">
+                    <!--                            <div class="desc">
+                                                        <div class="desc-title">
+                                                            <span>Caption</span>
+                                                        </div>
+                                                    </div>
+                        --> <img src="{{ url_for ('static',filename = 'AweAmDJzK6xBp7A480x360.jpeg') }}" alt="">
+                </a>
                 <!--Image 6-->
                 <a class="element-item grid-item mix mockups" href="static/1.webp">
                     <!--                            <div class="desc">
@@ -72,7 +86,14 @@
                                                     </div>
                         --> <img src="{{ url_for ('static',filename = '1.webp') }}" alt="">
                 </a>
-
+                <a class="element-item grid-item mix mockups" href="static/download2.jpeg">
+                    <!--                            <div class="desc">
+                                                        <div class="desc-title">
+                                                            <span>Caption</span>
+                                                        </div>
+                                                    </div>
+                        --> <img src="{{ url_for ('static',filename = 'download2.jpeg') }}" alt="">
+                </a>
                 <!--Image 7-->
                 <a class="element-item grid-item mix mockups" href="static/kalna polytechnic.jpg">
                     <!--                            <div class="desc">
@@ -102,5 +123,82 @@
                                                     </div>
                         --> <img src="{{ url_for ('static',filename = 'princple.jpg') }}" alt="">
                 </a>
+                <a class="element-item grid-item mix mockups" href="static\AEgzfZN6MaAmzhQ480x360.jpeg">
+                    <!--                            <div class="desc">
+                                                        <div class="desc-title">
+                                                            <span>Caption</span>
+                                                        </div>
+                                                    </div>
+                        --> <img src="{{ url_for ('static',filename = 'AEgzfZN6MaAmzhQ480x360.jpeg') }}" alt="">
+                </a>
+                <a class="element-item grid-item mix mockups" href="static\AN0hDW6OLfEcHrw480x360.jpeg">
+                    <!--                            <div class="desc">
+                                                        <div class="desc-title">
+                                                            <span>Caption</span>
+                                                        </div>
+                                                    </div>
+                        --> <img src="{{ url_for ('static',filename = 'AN0hDW6OLfEcHrw480x360.jpeg') }}" alt="">
+                </a>
                 </div></div></div></div>
+<div class="hi" style="margin: 25px 0px;"></div>
+                <script>
+                    $(document).ready(function () {
+                        var $grid = $('.grid').imagesLoaded(function () {
+                            $grid.masonry({
+                                itemSelector: '.grid-item',
+                                percentPosition: true,
+                                columnWidth: '.grid-sizer'
+                            });
+                        });
+                
+                        $('.grid').magnificPopup({
+                            delegate: 'a', // child items selector, by clicking on it popup will open
+                            type: 'image',
+                            tLoading: 'Loading image #%curr%...',
+                            mainClass: 'mfp-img-mobile',
+                            zoom: {
+                                enabled: true,
+                                duration: 300,
+                                easing: 'ease-in-out'
+                            },
+                            gallery: {
+                                enabled: true,
+                                navigateByImgClick: true,
+                                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                            },
+                            image: {
+                                verticalFit: true
+                            }
+                            // other options
+                        });
+                    })
+                </script>
+                <script>
+                    $(document).on('click', function (e) {
+                        var
+                                $popover,
+                                $target = $(e.target);
+                
+                        //do nothing if there was a click on popover content
+                        if ($target.hasClass('popover') || $target.closest('.popover').length) {
+                            return;
+                        }
+                
+                        $('[data-toggle="popover"]').each(function () {
+                            $popover = $(this);
+                
+                            if (!$popover.is(e.target) &&
+                                    $popover.has(e.target).length === 0 &&
+                                    $('.popover').has(e.target).length === 0) {
+                                $popover.popover('hide');
+                            } else {
+                                //fixes issue described above
+                                $popover.popover('toggle');
+                            }
+                        });
+                    })
+                
+                
+                </script>
+                <script src="//code.tidio.co/fcritcfns5rxora7w0yd8ig3ifo2auyp.js" async></script>
 {% endblock body %}
